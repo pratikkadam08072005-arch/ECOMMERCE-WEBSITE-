@@ -1,0 +1,688 @@
+/* Order Confirmation Enhanced Styling for Footwear Theme */
+
+/* Global Styles & Footwear Theme */
+body {
+    background-color: #f8f9fa;
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    background-image: url('../assets/images/footwear-pattern-light.png');
+    background-attachment: fixed;
+    background-size: 200px;
+    background-opacity: 0.1;
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.92);
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(90deg, #ff9a8b 0%, #ff6a88 55%, #ff99ac 100%);
+}
+
+h1 {
+    color: #333;
+    font-weight: 700;
+    position: relative;
+    padding-bottom: 15px;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+h1:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, #ff9a8b 0%, #ff6a88 55%, #ff99ac 100%);
+    transition: width 0.3s ease;
+}
+
+h1:hover:after {
+    width: 100px;
+}
+
+h4 {
+    font-weight: 600;
+    color: #444;
+}
+
+/* Card Styles */
+.card {
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+    background: linear-gradient(to right, #f8f9fa, #e9ecef);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    padding: 15px 20px;
+}
+
+.card-body {
+    padding: 25px;
+}
+
+/* Order Items */
+.order-item {
+    padding: 15px 0;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #eee;
+    transition: all 0.3s ease;
+}
+
+.order-item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.order-item:hover {
+    background-color: rgba(249, 249, 249, 0.7);
+    transform: translateX(5px);
+    padding-left: 10px;
+}
+
+.product-image {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.product-image:hover {
+    transform: scale(1.05);
+}
+
+/* Form Elements */
+.field-group {
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: 500;
+    color: #555;
+    margin-bottom: 6px;
+    display: block;
+}
+
+.form-control {
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    padding: 12px 15px;
+    height: auto;
+    transition: all 0.3s ease;
+}
+
+.form-control:focus {
+    box-shadow: 0 0 0 3px rgba(255, 106, 136, 0.2);
+    border-color: #ff6a88;
+}
+
+textarea.form-control {
+    min-height: 100px;
+}
+
+/* Payment Methods */
+.payment-method {
+    border: 1px solid #eee;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 15px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.payment-method:hover {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.payment-method.selected {
+    border-color: #ff6a88;
+    background-color: rgba(255, 106, 136, 0.05);
+    box-shadow: 0 5px 15px rgba(255, 106, 136, 0.1);
+}
+
+.payment-method .form-check-label {
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.payment-method:hover .fas,
+.payment-method:hover .fab {
+    transform: scale(1.1);
+}
+
+.bank-details, .upi-details, .card-details {
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px dashed #eee;
+    animation: fadeIn 0.5s ease;
+}
+
+/* Payment Icons */
+.fab, .fas {
+    transition: all 0.3s ease;
+    color: #777;
+}
+
+.fa-cc-visa:hover { color: #0157a2; }
+.fa-cc-mastercard:hover { color: #ea001b; }
+.fa-cc-amex:hover { color: #006fcf; }
+.fa-cc-rupay:hover { color: #8a1538; }
+
+/* UPI QR Code Section */
+#upi-qrcode {
+    transition: all 0.3s ease;
+}
+
+#upi-qrcode img {
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+#upi-qrcode:hover img {
+    transform: scale(1.02);
+}
+
+/* Buttons */
+.btn {
+    border-radius: 8px;
+    padding: 12px 20px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 5px;
+    height: 5px;
+    background: rgba(255, 255, 255, 0.5);
+    opacity: 0;
+    border-radius: 100%;
+    transform: scale(1, 1) translate(-50%);
+    transform-origin: 50% 50%;
+}
+
+.btn:hover:after {
+    animation: ripple 1s ease-out;
+}
+
+.btn-success {
+    background: linear-gradient(45deg, #2ecc71, #27ae60);
+    border: none;
+    box-shadow: 0 4px 12px rgba(46, 204, 113, 0.3);
+}
+
+.btn-success:hover {
+    background: linear-gradient(45deg, #27ae60, #219653);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(46, 204, 113, 0.4);
+}
+
+.btn-primary {
+    background: linear-gradient(45deg, #3498db, #2980b9);
+    border: none;
+    box-shadow: 0 4px 12px rgba(52, 152, 219, 0.3);
+}
+
+.btn-primary:hover {
+    background: linear-gradient(45deg, #2980b9, #1f6aa7);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(52, 152, 219, 0.4);
+}
+
+.btn-outline-secondary {
+    border: 1px solid #ccc;
+    color: #666;
+}
+
+.btn-outline-secondary:hover {
+    background-color: #f5f5f5;
+    color: #444;
+    border-color: #bbb;
+}
+
+/* Badges */
+.badge {
+    padding: 5px 10px;
+    font-weight: 500;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+}
+
+.badge-warning {
+    background-color: #ffc107;
+    color: #000;
+}
+
+.badge-success {
+    background-color: #28a745;
+}
+
+/* Order Summary */
+.order-summary hr {
+    border-color: #eee;
+    margin: 15px 0;
+}
+
+/* Alerts */
+.alert {
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+}
+
+.alert-info {
+    background-color: rgba(52, 152, 219, 0.1);
+    color: #2980b9;
+    border-left: 4px solid #3498db;
+}
+
+.alert-warning {
+    background-color: rgba(241, 196, 15, 0.1);
+    color: #d35400;
+    border-left: 4px solid #f1c40f;
+}
+
+.alert-danger {
+    background-color: rgba(231, 76, 60, 0.1);
+    color: #c0392b;
+    border-left: 4px solid #e74c3c;
+}
+
+/* Secure Checkout Section */
+.secure-checkout {
+    text-align: center;
+    padding: 20px;
+}
+
+.secure-checkout .fa-lock {
+    color: #27ae60;
+    margin-bottom: 15px;
+    animation: pulse 2s infinite;
+}
+
+/* Footwear Theme Elements */
+.shoe-icon {
+    position: absolute;
+    opacity: 0.05;
+    z-index: -1;
+}
+
+.shoe-icon-1 {
+    bottom: 20px;
+    right: 20px;
+    font-size: 150px;
+    transform: rotate(-15deg);
+}
+
+.shoe-icon-2 {
+    top: 20px;
+    left: 20px;
+    font-size: 100px;
+    transform: rotate(15deg);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+@keyframes ripple {
+    0% {
+        transform: scale(0, 0);
+        opacity: 1;
+    }
+    20% {
+        transform: scale(25, 25);
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        transform: scale(40, 40);
+    }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+    
+    .card {
+        margin-bottom: 20px;
+    }
+    
+    .order-item {
+        text-align: center;
+    }
+    
+    .order-item .col-md-4 {
+        text-align: center;
+        margin-top: 10px;
+    }
+    
+    .product-image {
+        max-width: 150px;
+        margin: 0 auto 15px;
+    }
+}
+
+/* Footer Enhancement */
+footer {
+    background: linear-gradient(45deg, #333, #222);
+    color: #fff;
+    padding: 40px 0 20px;
+    position: relative;
+    z-index: 1;
+    margin-top: 50px;
+}
+
+footer::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: 0;
+    right: 0;
+    height: 20px;
+    background-image: url('../assets/images/footer-wave.svg');
+    background-size: cover;
+    z-index: -1;
+}
+
+footer h5 {
+    color: #fff;
+    margin-bottom: 20px;
+    font-weight: 600;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+footer h5::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 40px;
+    height: 2px;
+    background: linear-gradient(90deg, #ff9a8b 0%, #ff6a88 55%, #ff99ac 100%);
+}
+
+footer a {
+    color: rgba(255, 255, 255, 0.8);
+    transition: all 0.3s ease;
+}
+
+footer a:hover {
+    color: #ff6a88;
+    text-decoration: none;
+    padding-left: 5px;
+}
+
+/* Footwear Timeline */
+.order-timeline {
+    position: relative;
+    padding: 20px 0;
+    margin-bottom: 30px;
+}
+
+.order-timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 3px;
+    height: 100%;
+    background: #eee;
+    transform: translateX(-50%);
+}
+
+.timeline-step {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.timeline-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #fff;
+    border: 3px solid #eee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    transition: all 0.3s ease;
+}
+
+.timeline-icon.active {
+    border-color: #ff6a88;
+    background: #ff6a88;
+    color: #fff;
+}
+
+.timeline-content {
+    width: 45%;
+    padding: 15px;
+    border-radius: 10px;
+    background: #fff;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.timeline-content:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.timeline-content.left {
+    margin-right: 50px;
+}
+
+.timeline-content.right {
+    margin-left: 50px;
+}
+
+.timeline-content.left::after {
+    content: '';
+    position: absolute;
+    top: 20px;
+    right: -10px;
+    width: 20px;
+    height: 20px;
+    background: #fff;
+    transform: rotate(45deg);
+    border-top: 1px solid #eee;
+    border-right: 1px solid #eee;
+}
+
+.timeline-content.right::after {
+    content: '';
+    position: absolute;
+    top: 20px;
+    left: -10px;
+    width: 20px;
+    height: 20px;
+    background: #fff;
+    transform: rotate(45deg);
+    border-bottom: 1px solid #eee;
+    border-left: 1px solid #eee;
+}
+
+/* Custom Footwear Tooltips */
+[data-tooltip] {
+    position: relative;
+    cursor: pointer;
+}
+
+[data-tooltip]::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 125%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+[data-tooltip]:hover::after {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Color Selection for Footwear */
+.color-options {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.color-option {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    border: 2px solid transparent;
+}
+
+.color-option:hover {
+    transform: scale(1.1);
+}
+
+.color-option.selected {
+    border-color: #333;
+}
+
+.color-option.red { background-color: #e74c3c; }
+.color-option.blue { background-color: #3498db; }
+.color-option.black { background-color: #333; }
+.color-option.white { background-color: #fff; border: 1px solid #ddd; }
+
+/* Size Chart Flyout */
+.size-chart-toggle {
+    font-size: 12px;
+    color: #3498db;
+    cursor: pointer;
+    margin-left: 5px;
+    transition: all 0.3s ease;
+}
+
+.size-chart-toggle:hover {
+    text-decoration: underline;
+    color: #2980b9;
+}
+
+.size-chart {
+    position: fixed;
+    top: 0;
+    right: -350px;
+    width: 350px;
+    height: 100%;
+    background: #fff;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    z-index: 1000;
+    transition: right 0.3s ease;
+}
+
+.size-chart.show {
+    right: 0;
+}
+
+.size-chart-close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Loader Animation for Processing */
+.loader {
+    width: 40px;
+    height: 40px;
+    border: 3px solid rgba(255, 106, 136, 0.2);
+    border-radius: 50%;
+    border-top-color: #ff6a88;
+    animation: spin 1s infinite linear;
+    margin: 0 auto;
+    display: none;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Additional Enhancement for UPI QR Code */
+#upi-qrcode {
+    position: relative;
+    display: inline-block;
+}
+
+#upi-qrcode::after {
+    content: "Scan with UPI App";
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #ff6a88;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 30px;
+    font-size: 12px;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+#upi-qrcode:hover::after {
+    opacity: 1;
+    bottom: -25px;
+}
