@@ -133,13 +133,18 @@ npm start
 
 Add screenshots of your application here:
 
-```text
-Home Page
-Product Page
-Shopping Cart
-Checkout Page
-Login Page
-```
+
+<img width="1916" height="916" alt="Screenshot 2026-08-10 224243" src="https://github.com/user-attachments/assets/d8bf7aae-0e5a-4169-9bee-946f16cf04e8" />
+
+<img width="1915" height="960" alt="Screenshot 2026-08-10 224304" src="https://github.com/user-attachments/assets/5fbff58b-29f4-49f0-a1ef-a4ea282c2d72" />
+
+<img width="1917" height="901" alt="Screenshot 2026-08-10 224927" src="https://github.com/user-attachments/assets/f2956bd9-2755-4db9-857d-bed074dfdea4" />
+
+Checkout Pag<img width="1906" height="887" alt="Screenshot 2026-08-10 225009" src="https://github.com/user-attachments/assets/91962dad-dafb-4990-b553-c83c26f729dd" />
+
+Login Page<img width="1900" height="898" alt="Screenshot 2026-08-10 224714" src="https://github.com/user-attachments/assets/6695324a-4a46-480a-a9bd-d8e7bbdddd80" />
+<img width="1916" height="912" alt="Screenshot 2026-08-10 224447" src="https://github.com/user-attachments/assets/363800a2-c0b7-40b8-8937-f88a1d610bc1" />
+<img width="1917" height="907" alt="Screenshot 2026-08-10 224504" src="https://github.com/user-attachments/assets/c193fc57-caa1-4b81-8e5d-16e83370b1bd" />
 
 ## 🎯 Objectives
 
